@@ -14,9 +14,9 @@ module.exports = function(grunt) {
           dynamic: {
             files: [{
               expand: true,
-              cwd: 'views/images/',
+              cwd: 'img/',
               src: ['**/*.{png,jpg}'],
-              dest: 'views/images/'
+              dest: 'img/'
             }]
           }
         },
@@ -41,9 +41,10 @@ module.exports = function(grunt) {
   });
 
   // grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-responsive-images');
+  // grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.registerTask('default', ['imagemin', 'responsive_images']);
+  grunt.registerTask('default', ['imagemin']);
+  // grunt.registerTask('default', ['imagemin', 'responsive_images']);
   // grunt.loadNpmTasks('grunt-responsive-images');
   // grunt.registerTask('default', ['responsive_images']);
   // grunt.loadNpmTasks('grunt-contrib-clean');
